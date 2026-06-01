@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  # ─── ML Pipeline ───────────────────────────────────────────────────────────
+  ml-pipeline:
+    build:
+      context: .
+      target: ml-pipeline
+    volumes:
+      - ./outputs:/app/outputs
+      - ./dataset:/app/dataset
+    command: python run_pipeline.py
+
+  # ─── FastAPI Backend ───────────────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      target: api-server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./outputs:/app/outputs
+      - ./dataset:/app/dataset
+    depends_on:
+      ml-pipeline:
+        condition: service_completed_successfully
+
+  # ─── Next.js Dashboard ────────────────────────────────────────────────────
+  dashboard:
+    build:
+      context: ./dashboard
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://api:8000
+    depends_on:
+      - api
