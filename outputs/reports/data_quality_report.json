@@ -1,0 +1,394 @@
+{
+  "schema_validation": {
+    "train": {
+      "expected_columns": [
+        "Index",
+        "geohash",
+        "day",
+        "timestamp",
+        "demand",
+        "RoadType",
+        "NumberofLanes",
+        "LargeVehicles",
+        "Landmarks",
+        "Temperature",
+        "Weather"
+      ],
+      "actual_columns": [
+        "Index",
+        "geohash",
+        "day",
+        "timestamp",
+        "demand",
+        "RoadType",
+        "NumberofLanes",
+        "LargeVehicles",
+        "Landmarks",
+        "Temperature",
+        "Weather"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "schema_valid": true
+    },
+    "test": {
+      "expected_columns": [
+        "Index",
+        "geohash",
+        "day",
+        "timestamp",
+        "RoadType",
+        "NumberofLanes",
+        "LargeVehicles",
+        "Landmarks",
+        "Temperature",
+        "Weather"
+      ],
+      "actual_columns": [
+        "Index",
+        "geohash",
+        "day",
+        "timestamp",
+        "RoadType",
+        "NumberofLanes",
+        "LargeVehicles",
+        "Landmarks",
+        "Temperature",
+        "Weather"
+      ],
+      "missing_columns": [],
+      "extra_columns": [],
+      "schema_valid": true
+    }
+  },
+  "missing_values": {
+    "train": {
+      "total_rows": 77299,
+      "total_missing_cells": 3892,
+      "columns_with_missing": {
+        "RoadType": {
+          "count": 600,
+          "percentage": 0.78
+        },
+        "Temperature": {
+          "count": 2495,
+          "percentage": 3.23
+        },
+        "Weather": {
+          "count": 797,
+          "percentage": 1.03
+        }
+      }
+    },
+    "test": {
+      "total_rows": 41778,
+      "total_missing_cells": 2104,
+      "columns_with_missing": {
+        "RoadType": {
+          "count": 324,
+          "percentage": 0.78
+        },
+        "Temperature": {
+          "count": 1349,
+          "percentage": 3.23
+        },
+        "Weather": {
+          "count": 431,
+          "percentage": 1.03
+        }
+      }
+    }
+  },
+  "duplicates": {
+    "train": {
+      "total_rows": 77299,
+      "full_duplicates": 0,
+      "key_duplicates": 0,
+      "key_columns_used": [
+        "geohash",
+        "day",
+        "timestamp"
+      ]
+    },
+    "test": {
+      "total_rows": 41778,
+      "full_duplicates": 0,
+      "key_duplicates": 0,
+      "key_columns_used": [
+        "geohash",
+        "day",
+        "timestamp"
+      ]
+    }
+  },
+  "data_summary": {
+    "train": {
+      "shape": {
+        "rows": 77299,
+        "columns": 11
+      },
+      "dtypes": {
+        "Index": "int64",
+        "geohash": "object",
+        "day": "int64",
+        "timestamp": "object",
+        "demand": "float64",
+        "RoadType": "object",
+        "NumberofLanes": "int64",
+        "LargeVehicles": "object",
+        "Landmarks": "object",
+        "Temperature": "float64",
+        "Weather": "object"
+      },
+      "memory_usage_mb": 27.39,
+      "numerical_statistics": {
+        "Index": {
+          "count": 77299.0,
+          "mean": 38649.0,
+          "std": 22314.4436,
+          "min": 0.0,
+          "25%": 19324.5,
+          "50%": 38649.0,
+          "75%": 57973.5,
+          "max": 77298.0
+        },
+        "day": {
+          "count": 77299.0,
+          "mean": 48.1018,
+          "std": 0.3024,
+          "min": 48.0,
+          "25%": 48.0,
+          "50%": 48.0,
+          "75%": 48.0,
+          "max": 49.0
+        },
+        "demand": {
+          "count": 77299.0,
+          "mean": 0.0939,
+          "std": 0.1422,
+          "min": 0.0,
+          "25%": 0.0182,
+          "50%": 0.0478,
+          "75%": 0.1086,
+          "max": 1.0
+        },
+        "NumberofLanes": {
+          "count": 77299.0,
+          "mean": 2.0143,
+          "std": 0.9047,
+          "min": 1.0,
+          "25%": 1.0,
+          "50%": 2.0,
+          "75%": 3.0,
+          "max": 5.0
+        },
+        "Temperature": {
+          "count": 74804.0,
+          "mean": 16.4054,
+          "std": 7.3598,
+          "min": -14.9351,
+          "25%": 11.4305,
+          "50%": 16.3826,
+          "75%": 21.2988,
+          "max": 48.2514
+        }
+      },
+      "categorical_statistics": {
+        "geohash": {
+          "unique_values": 1249,
+          "top_values": {
+            "qp03xk": 105,
+            "qp092r": 105,
+            "qp03wz": 105,
+            "qp03xp": 105,
+            "qp097y": 105
+          },
+          "missing": 0
+        },
+        "timestamp": {
+          "unique_values": 96,
+          "top_values": {
+            "2:0": 1778,
+            "1:45": 1755,
+            "1:30": 1750,
+            "1:15": 1698,
+            "1:0": 1668
+          },
+          "missing": 0
+        },
+        "RoadType": {
+          "unique_values": 3,
+          "top_values": {
+            "Residential": 69230,
+            "Street": 3909,
+            "Highway": 3560
+          },
+          "missing": 600
+        },
+        "LargeVehicles": {
+          "unique_values": 2,
+          "top_values": {
+            "Not Allowed": 50673,
+            "Allowed": 26626
+          },
+          "missing": 0
+        },
+        "Landmarks": {
+          "unique_values": 2,
+          "top_values": {
+            "Yes": 52042,
+            "No": 25257
+          },
+          "missing": 0
+        },
+        "Weather": {
+          "unique_values": 4,
+          "top_values": {
+            "Sunny": 27717,
+            "Rainy": 20824,
+            "Foggy": 20243,
+            "Snowy": 7718
+          },
+          "missing": 797
+        }
+      }
+    },
+    "test": {
+      "shape": {
+        "rows": 41778,
+        "columns": 10
+      },
+      "dtypes": {
+        "Index": "int64",
+        "geohash": "object",
+        "day": "int64",
+        "timestamp": "object",
+        "RoadType": "object",
+        "NumberofLanes": "int64",
+        "LargeVehicles": "object",
+        "Landmarks": "object",
+        "Temperature": "float64",
+        "Weather": "object"
+      },
+      "memory_usage_mb": 14.46,
+      "numerical_statistics": {
+        "Index": {
+          "count": 41778.0,
+          "mean": 20888.5,
+          "std": 12060.4141,
+          "min": 0.0,
+          "25%": 10444.25,
+          "50%": 20888.5,
+          "75%": 31332.75,
+          "max": 41777.0
+        },
+        "day": {
+          "count": 41778.0,
+          "mean": 49.0,
+          "std": 0.0,
+          "min": 49.0,
+          "25%": 49.0,
+          "50%": 49.0,
+          "75%": 49.0,
+          "max": 49.0
+        },
+        "NumberofLanes": {
+          "count": 41778.0,
+          "mean": 2.069,
+          "std": 0.9885,
+          "min": 1.0,
+          "25%": 1.0,
+          "50%": 2.0,
+          "75%": 3.0,
+          "max": 5.0
+        },
+        "Temperature": {
+          "count": 40429.0,
+          "mean": 16.4573,
+          "std": 7.3511,
+          "min": -21.3146,
+          "25%": 11.527,
+          "50%": 16.4712,
+          "75%": 21.3659,
+          "max": 45.2304
+        }
+      },
+      "categorical_statistics": {
+        "geohash": {
+          "unique_values": 1190,
+          "top_values": {
+            "qp09dp": 47,
+            "qp098e": 47,
+            "qp099g": 47,
+            "qp09d5": 47,
+            "qp09d7": 47
+          },
+          "missing": 0
+        },
+        "timestamp": {
+          "unique_values": 47,
+          "top_values": {
+            "4:30": 939,
+            "4:45": 932,
+            "5:0": 932,
+            "4:0": 928,
+            "4:15": 926
+          },
+          "missing": 0
+        },
+        "RoadType": {
+          "unique_values": 3,
+          "top_values": {
+            "Residential": 33775,
+            "Highway": 4272,
+            "Street": 3407
+          },
+          "missing": 324
+        },
+        "LargeVehicles": {
+          "unique_values": 2,
+          "top_values": {
+            "Not Allowed": 26178,
+            "Allowed": 15600
+          },
+          "missing": 0
+        },
+        "Landmarks": {
+          "unique_values": 2,
+          "top_values": {
+            "Yes": 28245,
+            "No": 13533
+          },
+          "missing": 0
+        },
+        "Weather": {
+          "unique_values": 4,
+          "top_values": {
+            "Sunny": 15078,
+            "Foggy": 11102,
+            "Rainy": 11081,
+            "Snowy": 4086
+          },
+          "missing": 431
+        }
+      }
+    },
+    "target_analysis": {
+      "mean": 0.09394238120172715,
+      "median": 0.0477599362718394,
+      "std": 0.14219052638817983,
+      "min": 6.245650130093708e-07,
+      "max": 1.0,
+      "skewness": 3.7285172887316627,
+      "kurtosis": 17.33196231271383,
+      "quantiles": {
+        "25%": 0.0182272313088053,
+        "50%": 0.0477599362718394,
+        "75%": 0.1085951157589521,
+        "90%": 0.21645929499879876,
+        "95%": 0.33585657944598946,
+        "99%": 0.8622935899853418
+      }
+    }
+  }
+}

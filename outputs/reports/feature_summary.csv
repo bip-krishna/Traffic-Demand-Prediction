@@ -1,0 +1,12 @@
+feature,dtype,missing_count,missing_pct,unique_values,mean,std,min,max
+Index,int64,0,0.0,77299,38649.0,22314.4436,0.0,77298.0
+geohash,object,0,0.0,1249,,,,
+day,int64,0,0.0,2,48.1018,0.3024,48.0,49.0
+timestamp,object,0,0.0,96,,,,
+demand,float64,0,0.0,76715,0.0939,0.1422,6.245650130093708e-07,1.0
+RoadType,object,600,0.78,3,,,,
+NumberofLanes,int64,0,0.0,5,2.0143,0.9047,1.0,5.0
+LargeVehicles,object,0,0.0,2,,,,
+Landmarks,object,0,0.0,2,,,,
+Temperature,float64,2495,3.23,74804,16.4054,7.3598,-14.935096760357844,48.2514326535093
+Weather,object,797,1.03,4,,,,
