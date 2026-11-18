@@ -1,7 +1,8 @@
 # 🚦 AI Traffic Demand Prediction System
 
-A production-grade machine learning system for predicting traffic demand, featuring advanced ensemble models, SHAP explainability, and a real-time intelligence dashboard.
+A machine-learning pipeline for predicting traffic demand from tabular data. It trains and evaluates ensemble models, generates SHAP explanations, and serves results through a FastAPI API and a Next.js dashboard.
 
+[Quick start](#-quick-start) · [Modeling approach](approach_explanation.md) · [Dashboard](dashboard/README.md)
 
 ## 🏗 Architecture
 
